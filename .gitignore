@@ -7,3 +7,5 @@ __pycache__/
 
 # Android packaging (local build output, never publish the keystore or its password)
 android-package/
+
+.vercel
