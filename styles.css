@@ -324,6 +324,7 @@ table.vocab tr:nth-child(even) td{background:#F7F2E9}
 .consent-card p{margin:0 0 10px;font-size:.92rem}
 .consent-toggles{display:flex;flex-direction:column;gap:8px;margin:0 0 12px;padding:10px;
   border:1.5px dashed var(--line);border-radius:10px}
+.consent-toggles[hidden]{display:none}
 .consent-toggles label{display:flex;align-items:center;gap:8px;font-size:.9rem}
 .consent-actions{display:flex;gap:8px;flex-wrap:wrap;justify-content:flex-end}
 @media (max-width:520px){

@@ -727,9 +727,9 @@ async function renderWoordenboek(app) {
     <h1>🔎 Woordenboek <small class="muted" style="font-size:1rem">diccionario + búsqueda rápida</small></h1>
     <div class="card">
       <input class="fill-input" id="dictQ" style="max-width:100%" autocomplete="off"
-        placeholder="🔍 escribe en neerlandés O en español... (ej: huis, casa, afspraak, médico)">
-      <p class="muted" style="margin:.5em 0 0"><small>💡 Busca en las palabras del curso (con el desglose 🧩), en el banco de
-      <b>1900+ emojis bilingües</b> 😀 y ofrece atajos a diccionarios externos.</small></p>
+        placeholder="🔍 neerlandés o español...">
+      <p class="muted" style="margin:.5em 0 0"><small>💡 Busca en las palabras del curso (con el desglose 🧩) y ofrece
+      atajos a diccionarios externos.</small></p>
     </div>
     <div id="dictOut"><p class="muted center">⌨️ Empieza a escribir...</p></div>`;
   const [vocab, emo] = await Promise.all([allVocab(), emojiIndex()]);
