@@ -1,0 +1,64 @@
+<svg viewBox="0 0 900 560" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="La escalera de niveles CEFR">
+  <!-- fundo -->
+  <rect x="0" y="0" width="900" height="560" fill="#FBF7F0"/>
+
+  <!-- título -->
+  <text x="450" y="58" text-anchor="middle" font-family="Segoe UI, sans-serif" font-size="30" font-weight="bold" fill="#23201B">🎯 La escalera de niveles (CEFR)</text>
+
+  <!-- linha do chão -->
+  <line x1="40" y1="521" x2="860" y2="521" stroke="#23201B" stroke-width="3" stroke-linecap="round"/>
+
+  <!-- ===== degraus (esquerda = baixo, direita = alto) ===== -->
+  <!-- A1 -->
+  <rect x="45" y="400" width="128" height="120" rx="10" fill="#2E7D32" stroke="#23201B" stroke-width="2.5"/>
+  <text x="109" y="440" text-anchor="middle" font-family="Segoe UI, sans-serif" font-size="27" font-weight="bold" fill="#FFFFFF">A1</text>
+  <text x="109" y="466" text-anchor="middle" font-family="Segoe UI, sans-serif" font-size="16" fill="#FFFFFF">supervivencia</text>
+
+  <!-- A2 -->
+  <rect x="181" y="343" width="128" height="177" rx="10" fill="#558B2F" stroke="#23201B" stroke-width="2.5"/>
+  <text x="245" y="383" text-anchor="middle" font-family="Segoe UI, sans-serif" font-size="27" font-weight="bold" fill="#FFFFFF">A2</text>
+  <text x="245" y="409" text-anchor="middle" font-family="Segoe UI, sans-serif" font-size="16" fill="#FFFFFF">autonomía</text>
+
+  <!-- B1 -->
+  <rect x="317" y="286" width="128" height="234" rx="10" fill="#F9A825" stroke="#23201B" stroke-width="2.5"/>
+  <text x="381" y="326" text-anchor="middle" font-family="Segoe UI, sans-serif" font-size="27" font-weight="bold" fill="#23201B">B1</text>
+  <text x="381" y="352" text-anchor="middle" font-family="Segoe UI, sans-serif" font-size="16" fill="#23201B">independencia</text>
+
+  <!-- B2 -->
+  <rect x="453" y="229" width="128" height="291" rx="10" fill="#EF6C00" stroke="#23201B" stroke-width="2.5"/>
+  <text x="517" y="269" text-anchor="middle" font-family="Segoe UI, sans-serif" font-size="27" font-weight="bold" fill="#FFFFFF">B2</text>
+  <text x="517" y="295" text-anchor="middle" font-family="Segoe UI, sans-serif" font-size="16" fill="#FFFFFF">fluidez</text>
+
+  <!-- C1 -->
+  <rect x="589" y="172" width="128" height="348" rx="10" fill="#C62828" stroke="#23201B" stroke-width="2.5"/>
+  <text x="653" y="212" text-anchor="middle" font-family="Segoe UI, sans-serif" font-size="27" font-weight="bold" fill="#FFFFFF">C1</text>
+  <text x="653" y="238" text-anchor="middle" font-family="Segoe UI, sans-serif" font-size="16" fill="#FFFFFF">competencia</text>
+
+  <!-- C2 -->
+  <rect x="725" y="115" width="128" height="405" rx="10" fill="#6A1B9A" stroke="#23201B" stroke-width="2.5"/>
+  <text x="789" y="155" text-anchor="middle" font-family="Segoe UI, sans-serif" font-size="27" font-weight="bold" fill="#FFFFFF">C2</text>
+  <text x="789" y="181" text-anchor="middle" font-family="Segoe UI, sans-serif" font-size="16" fill="#FFFFFF">maestría</text>
+
+  <!-- ===== bandeirinhas de marco ===== -->
+  <!-- A2: inburgering -->
+  <line x1="245" y1="343" x2="245" y2="293" stroke="#23201B" stroke-width="3" stroke-linecap="round"/>
+  <polygon points="245,293 279,301 245,309" fill="#C99B2F" stroke="#23201B" stroke-width="2"/>
+  <text x="245" y="283" text-anchor="middle" font-family="Segoe UI, sans-serif" font-size="15" font-weight="bold" fill="#23201B">⭐ inburgering</text>
+
+  <!-- B2: universidad (ITNA) -->
+  <line x1="517" y1="229" x2="517" y2="179" stroke="#23201B" stroke-width="3" stroke-linecap="round"/>
+  <polygon points="517,179 551,187 517,195" fill="#C99B2F" stroke="#23201B" stroke-width="2"/>
+  <text x="517" y="165" text-anchor="middle" font-family="Segoe UI, sans-serif" font-size="15" font-weight="bold" fill="#23201B">🎓 universidad (ITNA)</text>
+
+  <!-- C1: NT2 completo -->
+  <line x1="653" y1="172" x2="653" y2="122" stroke="#23201B" stroke-width="3" stroke-linecap="round"/>
+  <polygon points="653,122 687,130 653,138" fill="#C99B2F" stroke="#23201B" stroke-width="2"/>
+  <text x="653" y="112" text-anchor="middle" font-family="Segoe UI, sans-serif" font-size="15" font-weight="bold" fill="#23201B">🏆 NT2 completo</text>
+
+  <!-- ===== bonequinho subindo entre A1 e A2 ===== -->
+  <!-- espelhado para caminhar para a direita (subindo) -->
+  <text transform="translate(152,396) scale(-1,1)" text-anchor="middle" font-family="Segoe UI, sans-serif" font-size="36">🚶</text>
+  <!-- setinha de subida -->
+  <path d="M 168 356 Q 185 330 206 328" fill="none" stroke="#17756B" stroke-width="3" stroke-dasharray="6 5" stroke-linecap="round"/>
+  <polygon points="212,327 199,321 202,336" fill="#17756B"/>
+</svg>

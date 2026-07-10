@@ -1,0 +1,101 @@
+<svg viewBox="0 0 900 620" xmlns="http://www.w3.org/2000/svg" font-family="Segoe UI, sans-serif">
+  <defs>
+    <marker id="arrI" markerWidth="11" markerHeight="11" refX="9" refY="5.5" orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L11,5.5 L0,11 Z" fill="#23201B"/>
+    </marker>
+    <marker id="arrC" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L12,6 L0,12 Z" fill="#C8401F"/>
+    </marker>
+  </defs>
+
+  <!-- background -->
+  <rect x="0" y="0" width="900" height="620" fill="#FBF7F0"/>
+
+  <!-- title -->
+  <text x="450" y="48" text-anchor="middle" font-size="28" font-weight="bold" fill="#23201B">🕐 A armadilha do relógio belga</text>
+
+  <!-- ===== clock ===== -->
+  <circle cx="450" cy="340" r="120" fill="#FFFFFF" stroke="#23201B" stroke-width="4"/>
+
+  <!-- hour ticks -->
+  <g stroke="#23201B" stroke-width="3" stroke-linecap="round">
+    <line x1="450" y1="234" x2="450" y2="226"/>
+    <line x1="503" y1="248.2" x2="507" y2="241.3"/>
+    <line x1="541.8" y1="287" x2="548.7" y2="283"/>
+    <line x1="556" y1="340" x2="564" y2="340"/>
+    <line x1="541.8" y1="393" x2="548.7" y2="397"/>
+    <line x1="503" y1="431.8" x2="507" y2="438.7"/>
+    <line x1="450" y1="446" x2="450" y2="454"/>
+    <line x1="397" y1="431.8" x2="393" y2="438.7"/>
+    <line x1="358.2" y1="393" x2="351.3" y2="397"/>
+    <line x1="344" y1="340" x2="336" y2="340"/>
+    <line x1="358.2" y1="287" x2="351.3" y2="283"/>
+    <line x1="397" y1="248.2" x2="393" y2="241.3"/>
+  </g>
+
+  <!-- numbers -->
+  <g font-size="16" font-weight="bold" text-anchor="middle" fill="#23201B">
+    <text x="450" y="249">12</text>
+    <text x="498.5" y="262">1</text>
+    <text x="534" y="297.5" fill="#1D4E89">2</text>
+    <text x="547" y="346" fill="#1D4E89">3</text>
+    <text x="534" y="394.5">4</text>
+    <text x="498.5" y="430">5</text>
+    <text x="401.5" y="430">7</text>
+    <text x="366" y="394.5">8</text>
+    <text x="353" y="346">9</text>
+    <text x="366" y="297.5">10</text>
+    <text x="401.5" y="262">11</text>
+  </g>
+  <!-- highlighted "6" (where the minute hand points at half drie) -->
+  <circle cx="450" cy="437" r="15" fill="#C8401F"/>
+  <text x="450" y="443" text-anchor="middle" font-size="16" font-weight="bold" fill="#FFFFFF">6</text>
+
+  <!-- hands: 14:30 → hour between 2 and 3, minute on 6 -->
+  <line x1="450" y1="340" x2="508" y2="324.5" stroke="#1D4E89" stroke-width="9" stroke-linecap="round"/>
+  <line x1="450" y1="340" x2="450" y2="428" stroke="#C8401F" stroke-width="6" stroke-linecap="round"/>
+  <circle cx="450" cy="340" r="9" fill="#23201B"/>
+  <circle cx="450" cy="340" r="4" fill="#C99B2F"/>
+
+  <!-- ===== labels around the clock ===== -->
+
+  <!-- 14:00 · twee uur (top) -->
+  <rect x="352" y="78" width="196" height="56" rx="12" fill="#FFFFFF" stroke="#23201B" stroke-width="2"/>
+  <text x="450" y="101" text-anchor="middle" font-size="16" font-weight="bold" fill="#1D4E89">14:00</text>
+  <text x="450" y="123" text-anchor="middle" font-size="17" fill="#23201B">twee uur</text>
+  <line x1="450" y1="138" x2="450" y2="210" stroke="#23201B" stroke-width="2.5" marker-end="url(#arrI)"/>
+
+  <!-- 14:15 · kwart na twee (right middle) -->
+  <rect x="645" y="300" width="235" height="58" rx="12" fill="#FFFFFF" stroke="#23201B" stroke-width="2"/>
+  <text x="762" y="324" text-anchor="middle" font-size="16" font-weight="bold" fill="#1D4E89">14:15</text>
+  <text x="762" y="346" text-anchor="middle" font-size="17" fill="#23201B">kwart na twee</text>
+  <line x1="641" y1="330" x2="578" y2="337" stroke="#23201B" stroke-width="2.5" marker-end="url(#arrI)"/>
+
+  <!-- 14:20 · tien voor half drie (right lower) -->
+  <rect x="645" y="418" width="235" height="58" rx="12" fill="#FFFFFF" stroke="#23201B" stroke-width="2"/>
+  <text x="762" y="442" text-anchor="middle" font-size="16" font-weight="bold" fill="#1D4E89">14:20</text>
+  <text x="762" y="464" text-anchor="middle" font-size="17" fill="#23201B">tien voor half drie 🤯</text>
+  <line x1="641" y1="447" x2="564" y2="406" stroke="#23201B" stroke-width="2.5" marker-end="url(#arrI)"/>
+
+  <!-- 14:40 · tien na half drie (left lower) -->
+  <rect x="20" y="418" width="235" height="58" rx="12" fill="#FFFFFF" stroke="#23201B" stroke-width="2"/>
+  <text x="137" y="442" text-anchor="middle" font-size="16" font-weight="bold" fill="#1D4E89">14:40</text>
+  <text x="137" y="464" text-anchor="middle" font-size="17" fill="#23201B">tien na half drie</text>
+  <line x1="259" y1="447" x2="336" y2="406" stroke="#23201B" stroke-width="2.5" marker-end="url(#arrI)"/>
+
+  <!-- 14:45 · kwart voor drie (left middle) -->
+  <rect x="20" y="300" width="235" height="58" rx="12" fill="#FFFFFF" stroke="#23201B" stroke-width="2"/>
+  <text x="137" y="324" text-anchor="middle" font-size="16" font-weight="bold" fill="#1D4E89">14:45</text>
+  <text x="137" y="346" text-anchor="middle" font-size="17" fill="#23201B">kwart voor drie</text>
+  <line x1="259" y1="330" x2="322" y2="337" stroke="#23201B" stroke-width="2.5" marker-end="url(#arrI)"/>
+
+  <!-- 14:30 · HALF DRIE (highlighted, bottom) -->
+  <rect x="285" y="485" width="330" height="64" rx="14" fill="#C8401F" stroke="#23201B" stroke-width="3"/>
+  <text x="450" y="512" text-anchor="middle" font-size="20" font-weight="bold" fill="#FFFFFF">14:30 · HALF DRIE ⚠️</text>
+  <text x="450" y="537" text-anchor="middle" font-size="18" font-weight="bold" fill="#FFFFFF">= 2:30, NÃO 3:30!</text>
+  <line x1="450" y1="482" x2="450" y2="466" stroke="#C8401F" stroke-width="3.5" marker-end="url(#arrC)"/>
+
+  <!-- footer -->
+  <rect x="210" y="572" width="480" height="42" rx="12" fill="#FFFFFF" stroke="#C99B2F" stroke-width="2.5"/>
+  <text x="450" y="599" text-anchor="middle" font-size="18" font-weight="bold" fill="#23201B">💡 <tspan fill="#17756B">half X</tspan> = metade do caminho até X</text>
+</svg>

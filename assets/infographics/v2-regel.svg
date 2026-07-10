@@ -1,0 +1,90 @@
+<svg viewBox="0 0 900 560" xmlns="http://www.w3.org/2000/svg" font-family="Segoe UI, sans-serif">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="12" markerHeight="12" markerUnits="userSpaceOnUse" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#C8401F"/>
+    </marker>
+  </defs>
+
+  <!-- background -->
+  <rect x="0" y="0" width="900" height="560" fill="#FBF7F0"/>
+
+  <!-- highlight band: position 2 column -->
+  <rect x="262" y="124" width="186" height="262" rx="14" fill="#C8401F" fill-opacity="0.06"
+        stroke="#C8401F" stroke-width="2.5" stroke-dasharray="7 6"/>
+
+  <!-- title -->
+  <text x="450" y="52" text-anchor="middle" font-size="28" font-weight="bold" fill="#23201B">🧱 A regra V2: o verbo mora na posição 2</text>
+
+  <!-- anchor above position 2 -->
+  <text x="355" y="112" text-anchor="middle" font-size="30">⚓</text>
+
+  <!-- position numbers -->
+  <circle cx="165" cy="146" r="15" fill="#FFFFFF" stroke="#23201B" stroke-width="2"/>
+  <text x="165" y="152" text-anchor="middle" font-size="16" font-weight="bold" fill="#23201B">1</text>
+  <circle cx="355" cy="146" r="15" fill="#C8401F" stroke="#23201B" stroke-width="2"/>
+  <text x="355" y="152" text-anchor="middle" font-size="16" font-weight="bold" fill="#FFFFFF">2</text>
+  <circle cx="545" cy="146" r="15" fill="#FFFFFF" stroke="#23201B" stroke-width="2"/>
+  <text x="545" y="152" text-anchor="middle" font-size="16" font-weight="bold" fill="#23201B">3</text>
+  <circle cx="735" cy="146" r="15" fill="#FFFFFF" stroke="#23201B" stroke-width="2"/>
+  <text x="735" y="152" text-anchor="middle" font-size="16" font-weight="bold" fill="#23201B">4</text>
+
+  <!-- ROW 1: Ik | koop | morgen | brood -->
+  <!-- couplings -->
+  <line x1="250" y1="206" x2="270" y2="206" stroke="#23201B" stroke-width="3"/>
+  <line x1="440" y1="206" x2="460" y2="206" stroke="#23201B" stroke-width="3"/>
+  <line x1="630" y1="206" x2="650" y2="206" stroke="#23201B" stroke-width="3"/>
+  <!-- wagons -->
+  <rect x="80"  y="174" width="170" height="64" rx="12" fill="#FFE9A8" stroke="#23201B" stroke-width="2.5"/>
+  <rect x="270" y="174" width="170" height="64" rx="12" fill="#FFB3A0" stroke="#23201B" stroke-width="2.5"/>
+  <rect x="460" y="174" width="170" height="64" rx="12" fill="#C9E4FF" stroke="#23201B" stroke-width="2.5"/>
+  <rect x="650" y="174" width="170" height="64" rx="12" fill="#D9F2D0" stroke="#23201B" stroke-width="2.5"/>
+  <!-- wheels -->
+  <circle cx="125" cy="246" r="7" fill="#23201B"/><circle cx="205" cy="246" r="7" fill="#23201B"/>
+  <circle cx="315" cy="246" r="7" fill="#23201B"/><circle cx="395" cy="246" r="7" fill="#23201B"/>
+  <circle cx="505" cy="246" r="7" fill="#23201B"/><circle cx="585" cy="246" r="7" fill="#23201B"/>
+  <circle cx="695" cy="246" r="7" fill="#23201B"/><circle cx="775" cy="246" r="7" fill="#23201B"/>
+  <!-- words -->
+  <text x="165" y="214" text-anchor="middle" font-size="22" font-weight="bold" fill="#23201B">Ik</text>
+  <text x="355" y="214" text-anchor="middle" font-size="22" font-weight="bold" fill="#23201B">koop</text>
+  <text x="545" y="214" text-anchor="middle" font-size="22" font-weight="bold" fill="#23201B">morgen</text>
+  <text x="735" y="214" text-anchor="middle" font-size="22" font-weight="bold" fill="#23201B">brood</text>
+
+  <!-- curved arrow: "ik" jumps to after the verb -->
+  <path d="M 165 260 C 240 312, 460 248, 538 296" fill="none" stroke="#C8401F" stroke-width="3.5" marker-end="url(#arrow)"/>
+  <text x="680" y="272" text-anchor="middle" font-size="15" font-style="italic" fill="#C8401F">"ik" pula para depois do verbo</text>
+
+  <!-- ROW 2: Morgen | koop | ik | brood -->
+  <!-- couplings -->
+  <line x1="250" y1="336" x2="270" y2="336" stroke="#23201B" stroke-width="3"/>
+  <line x1="440" y1="336" x2="460" y2="336" stroke="#23201B" stroke-width="3"/>
+  <line x1="630" y1="336" x2="650" y2="336" stroke="#23201B" stroke-width="3"/>
+  <!-- wagons -->
+  <rect x="80"  y="304" width="170" height="64" rx="12" fill="#C9E4FF" stroke="#23201B" stroke-width="2.5"/>
+  <rect x="270" y="304" width="170" height="64" rx="12" fill="#FFB3A0" stroke="#23201B" stroke-width="2.5"/>
+  <rect x="460" y="304" width="170" height="64" rx="12" fill="#FFE9A8" stroke="#23201B" stroke-width="2.5"/>
+  <rect x="650" y="304" width="170" height="64" rx="12" fill="#D9F2D0" stroke="#23201B" stroke-width="2.5"/>
+  <!-- wheels -->
+  <circle cx="125" cy="376" r="7" fill="#23201B"/><circle cx="205" cy="376" r="7" fill="#23201B"/>
+  <circle cx="315" cy="376" r="7" fill="#23201B"/><circle cx="395" cy="376" r="7" fill="#23201B"/>
+  <circle cx="505" cy="376" r="7" fill="#23201B"/><circle cx="585" cy="376" r="7" fill="#23201B"/>
+  <circle cx="695" cy="376" r="7" fill="#23201B"/><circle cx="775" cy="376" r="7" fill="#23201B"/>
+  <!-- words -->
+  <text x="165" y="344" text-anchor="middle" font-size="22" font-weight="bold" fill="#23201B">Morgen</text>
+  <text x="355" y="344" text-anchor="middle" font-size="22" font-weight="bold" fill="#23201B">koop</text>
+  <text x="545" y="344" text-anchor="middle" font-size="22" font-weight="bold" fill="#23201B">ik</text>
+  <text x="735" y="344" text-anchor="middle" font-size="22" font-weight="bold" fill="#23201B">brood</text>
+
+  <!-- legend -->
+  <rect x="227" y="422" width="26" height="26" rx="5" fill="#FFE9A8" stroke="#23201B" stroke-width="2"/>
+  <text x="263" y="441" font-size="16" fill="#23201B">sujeito</text>
+  <rect x="353" y="422" width="26" height="26" rx="5" fill="#FFB3A0" stroke="#23201B" stroke-width="2"/>
+  <text x="389" y="441" font-size="16" fill="#23201B">verbo</text>
+  <rect x="469" y="422" width="26" height="26" rx="5" fill="#C9E4FF" stroke="#23201B" stroke-width="2"/>
+  <text x="505" y="441" font-size="16" fill="#23201B">tempo</text>
+  <rect x="591" y="422" width="26" height="26" rx="5" fill="#D9F2D0" stroke="#23201B" stroke-width="2"/>
+  <text x="627" y="441" font-size="16" fill="#23201B">objeto</text>
+
+  <!-- footer -->
+  <rect x="90" y="478" width="720" height="56" rx="14" fill="#23201B"/>
+  <text x="450" y="513" text-anchor="middle" font-size="19" font-weight="bold" fill="#FBF7F0">Comece como quiser, mas o verbo NUNCA sai da posição 2</text>
+</svg>

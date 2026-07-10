@@ -1,0 +1,50 @@
+<svg viewBox="0 0 900 560" xmlns="http://www.w3.org/2000/svg" font-family="Segoe UI, sans-serif">
+  <!-- background -->
+  <rect width="900" height="560" fill="#FBF7F0"/>
+
+  <!-- title -->
+  <text x="450" y="54" text-anchor="middle" font-size="28" font-weight="bold" fill="#23201B">🦀 A pinça (tangconstructie)</text>
+  <text x="450" y="86" text-anchor="middle" font-size="16" fill="#6E675C">O verbo agarra a frase inteira como uma pinça de caranguejo</text>
+
+  <!-- crab pincer: two arcs from "heb" to "gekocht" -->
+  <path d="M198 262 Q471 40 744 262 Q471 100 198 262 Z" fill="#C8401F" fill-opacity="0.08" stroke="none"/>
+  <path d="M198 262 Q471 40 744 262" fill="none" stroke="#C8401F" stroke-width="5" stroke-linecap="round"/>
+  <path d="M198 262 Q471 100 744 262" fill="none" stroke="#C8401F" stroke-width="3.5" stroke-linecap="round"/>
+  <text x="471" y="138" text-anchor="middle" font-size="32">🦀</text>
+
+  <!-- sentence blocks -->
+  <!-- Ik -->
+  <rect x="98" y="270" width="52" height="52" rx="12" fill="#FFFFFF" stroke="#23201B" stroke-width="2.5"/>
+  <text x="124" y="303" text-anchor="middle" font-size="20" font-weight="bold" fill="#23201B">Ik</text>
+  <!-- heb (coral) -->
+  <rect x="162" y="270" width="72" height="52" rx="12" fill="#C8401F" stroke="#23201B" stroke-width="2.5"/>
+  <text x="198" y="303" text-anchor="middle" font-size="20" font-weight="bold" fill="#FFFFFF">heb</text>
+  <!-- gisteren -->
+  <rect x="246" y="270" width="118" height="52" rx="12" fill="#FFFFFF" stroke="#23201B" stroke-width="2.5"/>
+  <text x="305" y="303" text-anchor="middle" font-size="20" font-weight="bold" fill="#23201B">gisteren</text>
+  <!-- in Antwerpen -->
+  <rect x="376" y="270" width="158" height="52" rx="12" fill="#FFFFFF" stroke="#23201B" stroke-width="2.5"/>
+  <text x="455" y="303" text-anchor="middle" font-size="20" font-weight="bold" fill="#23201B">in Antwerpen</text>
+  <!-- een brood -->
+  <rect x="546" y="270" width="128" height="52" rx="12" fill="#FFFFFF" stroke="#23201B" stroke-width="2.5"/>
+  <text x="610" y="303" text-anchor="middle" font-size="20" font-weight="bold" fill="#23201B">een brood</text>
+  <!-- gekocht (coral) -->
+  <rect x="686" y="270" width="116" height="52" rx="12" fill="#C8401F" stroke="#23201B" stroke-width="2.5"/>
+  <text x="744" y="303" text-anchor="middle" font-size="20" font-weight="bold" fill="#FFFFFF">gekocht</text>
+
+  <!-- position labels -->
+  <text x="124" y="348" text-anchor="middle" font-size="16" fill="#8A8378">1</text>
+  <text x="198" y="348" text-anchor="middle" font-size="16" font-weight="bold" fill="#C8401F">posição 2</text>
+  <text x="305" y="348" text-anchor="middle" font-size="16" fill="#8A8378">·</text>
+  <text x="455" y="348" text-anchor="middle" font-size="16" fill="#8A8378">·</text>
+  <text x="610" y="348" text-anchor="middle" font-size="16" fill="#8A8378">·</text>
+  <text x="744" y="348" text-anchor="middle" font-size="16" font-weight="bold" fill="#C8401F">FIM</text>
+
+  <!-- translation -->
+  <text x="450" y="404" text-anchor="middle" font-size="21" font-weight="bold" fill="#1E7A46">✅ Eu comprei um pão ontem em Antuérpia.</text>
+  <text x="450" y="434" text-anchor="middle" font-size="16" font-style="italic" fill="#8A8378">Glosa literal: « Eu tenho ontem em Antuérpia um pão comprado »</text>
+
+  <!-- footer rule -->
+  <rect x="100" y="462" width="700" height="58" rx="14" fill="#FFFFFF" stroke="#23201B" stroke-width="2.5"/>
+  <text x="450" y="498" text-anchor="middle" font-size="18" fill="#23201B">📌 Verbo conjugado na <tspan font-weight="bold" fill="#1D4E89">posição 2</tspan> · o resto do verbo <tspan font-weight="bold" fill="#C8401F">SEMPRE no fim</tspan></text>
+</svg>

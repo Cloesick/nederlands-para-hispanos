@@ -1,0 +1,22 @@
+{
+ "lessons": [
+  {
+   "id": "a1-01-conocerse",
+   "unit": "A1",
+   "title": "Presentarse · Kennismaken",
+   "emoji": "👋",
+   "phrases": 12,
+   "exercises": 14,
+   "vocab": 16
+  },
+  {
+   "id": "a1-02-de-het",
+   "unit": "A1",
+   "title": "De, Het y el plural · Lidwoorden",
+   "emoji": "🏷️",
+   "phrases": 12,
+   "exercises": 13,
+   "vocab": 16
+  }
+ ]
+}

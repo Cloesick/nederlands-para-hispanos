@@ -1,0 +1,32 @@
+{
+  "id": "/",
+  "name": "Nederlands! Curso de neerlandés para hispanohablantes",
+  "short_name": "Nederlands!",
+  "description": "Curso completo de neerlandés (flamenco) para hispanohablantes: lecciones A1-C1, ejercicios estilo Babbel, flashcards y audio.",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#FBF7F0",
+  "theme_color": "#23201B",
+  "lang": "es",
+  "dir": "ltr",
+  "categories": ["education", "reference", "productivity"],
+  "icons": [
+    { "src": "assets/favicon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" },
+    { "src": "assets/icons/icon-16.png", "sizes": "16x16", "type": "image/png", "purpose": "any" },
+    { "src": "assets/icons/icon-32.png", "sizes": "32x32", "type": "image/png", "purpose": "any" },
+    { "src": "assets/icons/icon-180.png", "sizes": "180x180", "type": "image/png", "purpose": "any" },
+    { "src": "assets/icons/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "assets/icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "assets/icons/icon-maskable-192.png", "sizes": "192x192", "type": "image/png", "purpose": "maskable" },
+    { "src": "assets/icons/icon-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ],
+  "screenshots": [
+    { "src": "assets/screenshots/home.png", "sizes": "800x1697", "type": "image/png", "form_factor": "narrow", "label": "Pantalla de inicio con selector de nivel" }
+  ],
+  "shortcuts": [
+    { "name": "Woordenboek", "short_name": "Diccionario", "url": "./index.html#/woordenboek", "icons": [{ "src": "assets/icons/icon-192.png", "sizes": "192x192" }] },
+    { "name": "Repaso", "short_name": "Repaso", "url": "./index.html#/revisao", "icons": [{ "src": "assets/icons/icon-192.png", "sizes": "192x192" }] }
+  ]
+}

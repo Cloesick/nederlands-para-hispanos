@@ -1,0 +1,79 @@
+<svg viewBox="0 0 900 640" xmlns="http://www.w3.org/2000/svg" font-family="Segoe UI, sans-serif">
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#23201B"/>
+    </marker>
+  </defs>
+
+  <!-- background -->
+  <rect x="0" y="0" width="900" height="640" fill="#FBF7F0"/>
+
+  <!-- title -->
+  <text x="450" y="52" text-anchor="middle" font-size="28" font-weight="bold" fill="#23201B">🏷️ DE ou HET? A árvore de decisão</text>
+  <text x="450" y="80" text-anchor="middle" font-size="15" fill="#23201B" opacity="0.75">Desça pelas perguntas: o primeiro SIM define o artigo</text>
+
+  <!-- ================= ROW 1 ================= -->
+  <rect x="80" y="95" width="360" height="60" rx="12" fill="#FFFFFF" stroke="#23201B" stroke-width="2.5"/>
+  <text x="260" y="132" text-anchor="middle" font-size="18" font-weight="600" fill="#23201B">1. É plural?</text>
+
+  <line x1="440" y1="125" x2="542" y2="125" stroke="#23201B" stroke-width="2.5" marker-end="url(#arr)"/>
+  <text x="490" y="115" text-anchor="middle" font-size="15" font-weight="bold" fill="#1E7A46">SIM</text>
+
+  <rect x="550" y="95" width="270" height="60" rx="12" fill="#C84B31" stroke="#23201B" stroke-width="2.5"/>
+  <text x="685" y="122" text-anchor="middle" font-size="23" font-weight="bold" fill="#FFFFFF">DE</text>
+  <text x="685" y="145" text-anchor="middle" font-size="15" font-style="italic" fill="#FFFFFF">de huizen</text>
+
+  <line x1="260" y1="155" x2="260" y2="193" stroke="#23201B" stroke-width="2.5" marker-end="url(#arr)"/>
+  <text x="274" y="180" font-size="15" font-weight="bold" fill="#23201B">NÃO</text>
+
+  <!-- ================= ROW 2 ================= -->
+  <rect x="80" y="200" width="360" height="60" rx="12" fill="#FFFFFF" stroke="#23201B" stroke-width="2.5"/>
+  <text x="260" y="237" text-anchor="middle" font-size="18" font-weight="600" fill="#23201B">2. É diminutivo (termina em -je)?</text>
+
+  <line x1="440" y1="230" x2="542" y2="230" stroke="#23201B" stroke-width="2.5" marker-end="url(#arr)"/>
+  <text x="490" y="220" text-anchor="middle" font-size="15" font-weight="bold" fill="#1E7A46">SIM</text>
+
+  <rect x="550" y="200" width="270" height="60" rx="12" fill="#17756B" stroke="#23201B" stroke-width="2.5"/>
+  <text x="685" y="227" text-anchor="middle" font-size="23" font-weight="bold" fill="#FFFFFF">HET</text>
+  <text x="685" y="250" text-anchor="middle" font-size="15" font-style="italic" fill="#FFFFFF">het huisje</text>
+
+  <line x1="260" y1="260" x2="260" y2="298" stroke="#23201B" stroke-width="2.5" marker-end="url(#arr)"/>
+  <text x="274" y="285" font-size="15" font-weight="bold" fill="#23201B">NÃO</text>
+
+  <!-- ================= ROW 3 ================= -->
+  <rect x="80" y="305" width="360" height="60" rx="12" fill="#FFFFFF" stroke="#23201B" stroke-width="2.5"/>
+  <text x="260" y="330" text-anchor="middle" font-size="17" font-weight="600" fill="#23201B">3. Pessoa/profissão ou termina</text>
+  <text x="260" y="352" text-anchor="middle" font-size="17" font-weight="600" fill="#23201B">em -ing, -heid ou -ie?</text>
+
+  <line x1="440" y1="335" x2="542" y2="335" stroke="#23201B" stroke-width="2.5" marker-end="url(#arr)"/>
+  <text x="490" y="325" text-anchor="middle" font-size="15" font-weight="bold" fill="#1E7A46">SIM</text>
+
+  <rect x="550" y="305" width="270" height="60" rx="12" fill="#C84B31" stroke="#23201B" stroke-width="2.5"/>
+  <text x="685" y="332" text-anchor="middle" font-size="23" font-weight="bold" fill="#FFFFFF">DE</text>
+  <text x="685" y="355" text-anchor="middle" font-size="15" font-style="italic" fill="#FFFFFF">de bakker</text>
+
+  <line x1="260" y1="365" x2="260" y2="403" stroke="#23201B" stroke-width="2.5" marker-end="url(#arr)"/>
+  <text x="274" y="390" font-size="15" font-weight="bold" fill="#23201B">NÃO</text>
+
+  <!-- ================= ROW 4 ================= -->
+  <rect x="80" y="410" width="360" height="60" rx="12" fill="#FFFFFF" stroke="#23201B" stroke-width="2.5"/>
+  <text x="260" y="447" text-anchor="middle" font-size="18" font-weight="600" fill="#23201B">4. Idioma, metal, -um ou -isme?</text>
+
+  <line x1="440" y1="440" x2="542" y2="440" stroke="#23201B" stroke-width="2.5" marker-end="url(#arr)"/>
+  <text x="490" y="430" text-anchor="middle" font-size="15" font-weight="bold" fill="#1E7A46">SIM</text>
+
+  <rect x="550" y="410" width="270" height="60" rx="12" fill="#17756B" stroke="#23201B" stroke-width="2.5"/>
+  <text x="685" y="437" text-anchor="middle" font-size="23" font-weight="bold" fill="#FFFFFF">HET</text>
+  <text x="685" y="460" text-anchor="middle" font-size="15" font-style="italic" fill="#FFFFFF">het Nederlands</text>
+
+  <line x1="260" y1="470" x2="260" y2="508" stroke="#23201B" stroke-width="2.5" marker-end="url(#arr)"/>
+  <text x="274" y="495" font-size="15" font-weight="bold" fill="#23201B">NÃO</text>
+
+  <!-- ================= FINAL BOX ================= -->
+  <rect x="80" y="515" width="740" height="75" rx="14" fill="#C99B2F" stroke="#23201B" stroke-width="3"/>
+  <text x="450" y="546" text-anchor="middle" font-size="21" font-weight="bold" fill="#23201B">🎯 Na dúvida? Chute DE!</text>
+  <text x="450" y="573" text-anchor="middle" font-size="16" fill="#23201B">Você acerta em 75% dos casos: a maioria das palavras é DE.</text>
+
+  <!-- footer -->
+  <text x="450" y="622" text-anchor="middle" font-size="15" fill="#23201B" opacity="0.7">Regra rápida: plural é sempre DE · diminutivo é sempre HET</text>
+</svg>

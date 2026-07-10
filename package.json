@@ -1,0 +1,10 @@
+{
+  "name": "nederlands-para-hispanos",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Curso de neerlandes para hispanohablantes en Flandes. Frontend estatico sin build; /api contiene funciones serverless de Vercel para el premium (Stripe + Supabase).",
+  "dependencies": {
+    "stripe": "^17.5.0",
+    "@supabase/supabase-js": "^2.47.0"
+  }
+}
