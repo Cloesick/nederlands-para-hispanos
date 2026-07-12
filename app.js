@@ -354,6 +354,11 @@ async function renderHome(app) {
     ejercicios estilo Babbel 🏋️, flashcards inteligentes 🃏 y audio 🔊.</p>
     ${next ? `<a class="btn primary" href="#/les/${next.id}">▶️ Continuar: ${next.emoji} ${esc(next.title)}</a>` : '<p>🏆 ¡Curso completo!</p>'}
     <img src="assets/infographics/cefr-ladder.svg" alt="La escalera de niveles A1 a C2" loading="lazy">
+    <p class="muted" style="font-size:.82rem;margin:.3em 0 0"><small>ℹ️ El inburgering hoy pide A2 para obtener el
+    certificado, pero quien empezó el trayecto a partir del 1 de marzo de 2022 también debe demostrar
+    <b>B1 oral</b> dentro de los 2 años siguientes — y el gobierno flamenco estudia subir la meta del
+    propio trayecto a B1. Fuente: <a href="https://www.integratie-inburgering.be/nl/inburgeringstraject" target="_blank" rel="noopener">integratie-inburgering.be</a>.
+    Conviene revisar la página oficial antes de tomar cualquier decisión real.</small></p>
     ${dailyHTML}
     <p class="muted" style="margin:.6em 0 .2em"><b>👉 Elige un nivel</b> para ver TODO su contenido (lecciones, frases y vocabulario):</p>
     <div class="level-picker">${['A1','A2','B1','B2','C1','C2'].map(u =>
