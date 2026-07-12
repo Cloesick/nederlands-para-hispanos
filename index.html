@@ -58,10 +58,6 @@
 <div id="toast" class="toast" hidden></div>
 <script src="config.js"></script>
 <script src="app.js"></script>
-<script>
-if ('serviceWorker' in navigator) {
-  window.addEventListener('load', () => navigator.serviceWorker.register('sw.js').catch(() => {}));
-}
-</script>
+<script src="assets/sw-register.js"></script>
 </body>
 </html>
