@@ -201,13 +201,28 @@ function pushAds(root) {
   });
 }
 /* ---------- mistakes quicklist: every wrong answer gets extra attention ---------- */
+// Mistakes cost a little XP (more on repeats, capped so a bad run can't spiral), floored at 0 so
+// XP itself never goes negative. Clearing a mistake pays some of it back - more for a verified
+// correct recall in the drill below than for the self-reported shortcut, since actual retrieval
+// practice is the thing that's supposed to fix the gap.
 function recordMistake(m) {
   const key = m.lesson + '|' + norm(m.q || m.answer || Math.random());
   const prev = S.mistakes[key];
-  S.mistakes[key] = { ...m, key, count: (prev ? prev.count : 0) + 1, ts: Date.now() };
+  const count = (prev ? prev.count : 0) + 1;
+  S.mistakes[key] = { ...m, key, count, ts: Date.now() };
+  const penalty = Math.min(2 + (count - 1), 6);
+  const before = S.xp;
+  S.xp = Math.max(0, S.xp - penalty);
   save(); updateMistakeBadge();
+  const lost = before - S.xp;
+  if (lost > 0) toast(`-${lost} ⚡ · revisa en 🎯 Dificultades`);
 }
-function clearMistake(key) { delete S.mistakes[key]; save(); updateMistakeBadge(); }
+function clearMistake(key, reward) {
+  delete S.mistakes[key];
+  if (reward) S.xp += reward;
+  save(); updateMistakeBadge();
+  if (reward) toast(`+${reward} ⚡ · ¡dificultad superada!`);
+}
 function mistakeList() { return Object.values(S.mistakes).sort((a, b) => b.count - a.count || b.ts - a.ts); }
 function updateMistakeBadge() {
   const n = mistakeList().length, b = document.getElementById('mistakeBadge');
@@ -648,8 +663,12 @@ function runFlashcards(body, L, cards) {
       fc.classList.toggle('flip'); $('#grade').hidden = false;
     });
     $('#grade').querySelectorAll('button').forEach(b => b.addEventListener('click', () => {
-      gradeCard(c.key, +b.dataset.g);
-      if (+b.dataset.g === 0) q.push(c); // see it again this session
+      const g = +b.dataset.g;
+      gradeCard(c.key, g);
+      // Cards from the "Dificultades" drill are tagged 'mist|<key>': a real (not self-reported)
+      // correct recall here is what actually earns the lost XP back.
+      if (c.key.startsWith('mist|') && g >= 1) clearMistake(c.key.slice(5), 5);
+      if (g === 0) q.push(c); // see it again this session
       i++; show();
     }));
   }
@@ -852,19 +871,20 @@ function renderMistakes(app) {
   app.innerHTML = `
     <div class="crumb"><a href="#/">🏠 Inicio</a></div>
     <h1>🎯 Mis dificultades <span class="muted" style="font-size:1rem">${list.length} ítem(s)</span></h1>
-    <p class="muted">Todo lo que fallaste, junto, para repasar con foco. Los errores repetidos aparecen arriba 🔺.</p>
-    <p><button class="btn primary" id="drill">🃏 Entrenar todo como flashcards</button>
+    <p class="muted">Todo lo que fallaste, junto, para repasar con foco. Los errores repetidos aparecen arriba 🔺.
+    Cada error resta un poco de ⚡; entrenar aquí te devuelve los puntos.</p>
+    <p><button class="btn primary" id="drill">🃏 Entrenar todo como flashcards (+5⚡ cada acierto)</button>
     <button class="btn" id="clearAll">🧹 Limpiar todo</button></p>
     <div class="mistake-list">${list.map(m => `<div class="card mistake" data-key="${esc(m.key)}">
       <div class="mistake-top"><span class="pill" style="background:${UNIT_COLORS[m.unit] || '#888'};color:#fff">${esc(m.unit || '')}</span>
         <span class="muted">${m.lessonEmoji || ''} ${esc(m.lessonTitle || '')}</span>
         ${m.count > 1 ? `<span class="rep">🔺 ${m.count}x</span>` : ''}
-        <button class="del-mistake" title="Ya lo aprendí" data-key="${esc(m.key)}">✓ aprendido</button></div>
+        <button class="del-mistake" title="Ya lo aprendí (+2⚡)" data-key="${esc(m.key)}">✓ aprendido</button></div>
       <div class="mistake-body"><b class="v-nl">${esc(m.nl || m.answer || '')}</b>
         ${hasTTS && (m.nl || m.answer) ? `<button class="speak-btn mspeak" data-say="${esc(m.nl || m.answer)}">🔊</button>` : ''}
         <span class="muted"> — ${esc(clockify(m.pt || m.q || ''))}</span></div></div>`).join('')}</div>`;
   app.querySelectorAll('.mspeak').forEach(b => b.addEventListener('click', () => speak(b.dataset.say)));
-  app.querySelectorAll('.del-mistake').forEach(b => b.addEventListener('click', () => { clearMistake(b.dataset.key); renderMistakes(app); }));
+  app.querySelectorAll('.del-mistake').forEach(b => b.addEventListener('click', () => { clearMistake(b.dataset.key, 2); renderMistakes(app); }));
   $('#clearAll').addEventListener('click', () => { if (confirm('¿Limpiar toda la lista de dificultades?')) { S.mistakes = {}; save(); updateMistakeBadge(); renderMistakes(app); } });
   $('#drill').addEventListener('click', () => {
     app.innerHTML = `<div class="crumb"><a href="#/dificuldades">← dificultades</a></div><h1>🃏 Entrenamiento de dificultades</h1><div id="mfc"></div>`;
