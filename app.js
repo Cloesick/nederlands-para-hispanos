@@ -328,9 +328,25 @@ function legendStrip(phrases) {
     <span><a href="#/legenda">🎨 leyenda completa</a></span></div>`;
 }
 
+/* ---------- cross-app switcher: jump between all sibling courses ---------- */
+function initSwitcher() {
+  const btn = document.getElementById('switcherBtn');
+  const menu = document.getElementById('switcherMenu');
+  if (!btn || !menu) return;
+  btn.addEventListener('click', e => {
+    e.stopPropagation();
+    const willOpen = menu.hidden;
+    menu.hidden = !willOpen;
+    btn.setAttribute('aria-expanded', String(willOpen));
+  });
+  menu.addEventListener('click', e => e.stopPropagation());
+  document.addEventListener('click', () => { menu.hidden = true; btn.setAttribute('aria-expanded', 'false'); });
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') { menu.hidden = true; btn.setAttribute('aria-expanded', 'false'); } });
+}
+
 /* ---------- router ---------- */
 window.addEventListener('hashchange', route);
-window.addEventListener('DOMContentLoaded', () => { paintStats(); route(); updateDueBadge(); updateMistakeBadge(); checkPremiumStatus(); initConsent(); });
+window.addEventListener('DOMContentLoaded', () => { paintStats(); route(); updateDueBadge(); updateMistakeBadge(); checkPremiumStatus(); initConsent(); initSwitcher(); });
 
 async function route() {
   const app = $('#app');

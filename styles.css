@@ -331,3 +331,27 @@ table.vocab tr:nth-child(even) td{background:#F7F2E9}
   .consent-actions{justify-content:stretch}
   .consent-actions .btn{flex:1}
 }
+
+/* ===== cross-app switcher: jump between all sibling courses ===== */
+.switcher{position:relative}
+.switcher-btn{background:none;border:none;color:#fff;font-size:1.1rem;cursor:pointer;
+  display:inline-flex;align-items:center;justify-content:center;min-width:34px;min-height:34px;
+  border-radius:8px;transition:background .12s}
+.switcher-btn:hover, .switcher-btn:focus-visible{background:rgba(255,255,255,.14)}
+.switcher-menu{position:absolute;top:calc(100% + 10px);right:0;background:var(--card);color:var(--ink);
+  border:2px solid var(--ink);border-radius:14px;box-shadow:4px 4px 0 rgba(35,32,27,.18);
+  min-width:250px;padding:8px;z-index:200;display:flex;flex-direction:column;gap:2px}
+.switcher-menu[hidden]{display:none}
+.switcher-label{margin:2px 8px 6px;font-size:.7rem;text-transform:uppercase;letter-spacing:.06em;
+  color:var(--soft);font-weight:700}
+.switcher-menu a{display:block;padding:10px 12px;border-radius:9px;text-decoration:none;color:var(--ink);
+  font-size:.92rem;font-weight:600}
+.switcher-menu a:hover, .switcher-menu a:focus-visible{background:var(--paper)}
+.switcher-menu a.current{opacity:.55;pointer-events:none;font-weight:700}
+.switcher-menu a.current small{font-weight:400;font-style:italic}
+@media(max-width:640px){
+  .switcher-menu{position:fixed;top:auto;bottom:0;left:0;right:0;border-radius:18px 18px 0 0;
+    max-height:70vh;overflow-y:auto;padding:14px 10px calc(14px + env(safe-area-inset-bottom));
+    box-shadow:0 -6px 24px rgba(0,0,0,.18)}
+  .switcher-menu a{padding:13px 14px;font-size:1rem}
+}
