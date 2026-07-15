@@ -14,7 +14,7 @@
 html{scroll-behavior:smooth}
 body{margin:0;background:var(--paper);color:var(--ink);font-family:"Segoe UI",Tahoma,system-ui,sans-serif;
   font-size:16px;line-height:1.55;min-height:100vh;display:flex;flex-direction:column}
-h1,h2,h3,h4{font-family:Georgia,"Times New Roman",serif;line-height:1.2;margin:0 0 .4em}
+h1,h2,h3,h4{font-family:Georgia,"Times New Roman",serif;line-height:1.2;margin:0 0 .4em;text-wrap:balance;letter-spacing:-.01em}
 a{color:var(--nl)}
 button{font-family:inherit}
 
@@ -116,7 +116,21 @@ table.vocab td{padding:7px 10px;border-top:1px solid var(--line);vertical-align:
 table.vocab tr:nth-child(even) td{background:#F7F2E9}
 .v-nl{font-weight:800;color:var(--nl)}
 .v-split{color:var(--soft);font-size:.85rem}
-.speak-btn{border:none;background:none;cursor:pointer;font-size:1rem;padding:0 4px}
+/* Audio is a core feature (pronunciation), not a footnote - real tap target, real feedback while playing */
+.speak-btn{display:inline-flex;align-items:center;justify-content:center;min-width:34px;min-height:34px;
+  border:1.5px solid var(--gold);background:#FFF9EC;color:#8A6A10;border-radius:50%;cursor:pointer;
+  font-size:1.05rem;padding:0;line-height:1;transition:transform .1s,background .15s,box-shadow .15s;
+  box-shadow:2px 2px 0 rgba(35,32,27,.10)}
+.speak-btn:hover{background:#FFF2D4}
+.speak-btn:active{transform:translate(1px,1px);box-shadow:none}
+.speak-btn.speaking{background:var(--gold);color:#fff;box-shadow:0 0 0 0 rgba(201,155,47,.5);
+  animation:speakPulse 1s ease-out infinite}
+@keyframes speakPulse{
+  0%{box-shadow:0 0 0 0 rgba(201,155,47,.45)}
+  70%{box-shadow:0 0 0 9px rgba(201,155,47,0)}
+  100%{box-shadow:0 0 0 0 rgba(201,155,47,0)}
+}
+@media (prefers-reduced-motion: reduce){.speak-btn.speaking{animation:none;background:var(--gold)}}
 
 /* ===== exercises ===== */
 .ex-progress{display:flex;align-items:center;gap:10px;margin-bottom:14px}
